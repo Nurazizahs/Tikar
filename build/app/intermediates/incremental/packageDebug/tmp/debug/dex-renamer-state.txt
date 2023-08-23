@@ -1,0 +1,4 @@
+#Wed Aug 23 12:03:34 ICT 2023
+base.0=E\:\\Tikar-main\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
