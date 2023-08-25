@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'features/home_consumer/view/home_view.dart';
 import 'theme/theme.dart';
 
 void main() {
@@ -13,39 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'TIKAR',
+      title: 'Flutter Demo',
       theme: AppTheme.theme,
-      home: const MyHomePage(title: 'TIKAR'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Pallete.barColor,
-        title: Text(widget.title),
-      ),
-      body: const Center(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: const Icon(
-          Icons.add,
-          color: Pallete.whiteColor,
-          ),
-      ), 
+      home: const HomeView(),
     );
   }
 }
