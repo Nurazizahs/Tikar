@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:tikar/features/home_consumer/view/home_view.dart';
 import 'package:tikar/theme/theme.dart';
 
 class SideDrawer extends ConsumerWidget {
@@ -7,7 +8,6 @@ class SideDrawer extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-
     return SafeArea(
       child: Drawer(
         backgroundColor: Pallete.barColor,
@@ -25,7 +25,11 @@ class SideDrawer extends ConsumerWidget {
                   fontSize: 22,
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return HomeView();
+              }));
+              },
             ),
             ListTile(
               leading: const Icon(

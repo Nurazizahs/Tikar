@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tikar/features/form_consumer/view/form_consumer.dart';
 import 'package:tikar/features/home_consumer/widgets/side_drawer.dart';
 
 import '../../../theme/theme.dart';
@@ -19,9 +20,8 @@ class _HomeViewState extends State<HomeView> {
         title: Container(
           height: 40,
           decoration: BoxDecoration(
-            color: Pallete.searchBarColor,
-            borderRadius: BorderRadius.circular(25)
-          ),
+              color: Pallete.searchBarColor,
+              borderRadius: BorderRadius.circular(25)),
           child: const Center(
             child: TextField(
               textAlign: TextAlign.start,
@@ -39,7 +39,7 @@ class _HomeViewState extends State<HomeView> {
                 border: InputBorder.none,
               ),
             ),
-          ) ,
+          ),
         ),
       ),
       body: Center(
@@ -49,16 +49,19 @@ class _HomeViewState extends State<HomeView> {
             Text(
               'Selamat Datang di Aplikasi TIKAR',
               style: TextStyle(
-                color: Pallete.blackColor,
+                color: Pallete.barColor,
                 fontWeight: FontWeight.bold,
               ),
             ),
           ],
         ),
-        
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () { },
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+            return FormView();
+          }));
+        },
         child: const Icon(
           Icons.add,
           color: Pallete.whiteColor,
