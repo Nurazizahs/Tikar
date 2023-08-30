@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tikar/features/payment_consumer/view/payment_consumer.dart';
 
 import '../../../theme/theme.dart';
 
@@ -192,7 +193,9 @@ class _FormViewState extends State<FormView> {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  // Aksi yang akan dijalankan saat tombol ditekan
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                    return PaymentView();
+                  }));
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Pallete.barColor,
